@@ -1,0 +1,57 @@
+Public Function GTDy(x1 As String, x2 As String, x3 As String, x4 As String, x5 As String, x6 As String, x7 As String)
+
+    If x1 = "Yes" Then
+       x1 = "Mon, "
+    Else
+       x1 = ""
+    End If
+    
+    If x2 = "Yes" Then
+       x2 = "Tue, "
+    Else
+       x2 = ""
+    End If
+
+    If x3 = "Yes" Then
+       x3 = "Wed, "
+    Else
+       x3 = ""
+    End If
+
+    If x4 = "Yes" Then
+       x4 = "Thu, "
+    Else
+       x4 = ""
+    End If
+
+    If x5 = "Yes" Then
+       x5 = "Fri, "
+    Else
+       x5 = ""
+    End If
+
+    If x6 = "Yes" Then
+       x6 = "Sat, "
+    Else
+       x6 = ""
+    End If
+
+    If x7 = "Yes" Then
+       x7 = "Sun, "
+    Else
+       x7 = ""
+    End If
+    
+    GTDy = Trim(x1 & x2 & x3 & x4 & x5 & x6 & x7)
+    
+    x = Len(GTDy)
+    If x > 0 Then
+        xx = Mid(GTDy, x, 1)
+    End If
+    If xx = "," Then
+       GTDy = Mid(GTDy, 1, x - 1)
+    Else
+       GTDy = GTDy
+    End If
+    
+End Function
